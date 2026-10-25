@@ -1,6 +1,6 @@
 # MyMusic – React Music Player
 
-A simple music player web app built with **React** and **Vite**, made as a mini project for my Web Technology course (5th semester).
+A simple music player web app built with **React** and **Vite**, made as a mini project for my Web Technology course.
 
 ## Features
 
