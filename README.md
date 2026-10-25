@@ -52,7 +52,7 @@ music-player/
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/<your-username>/music-player.git
+git clone https://github.com/<Nishkal00>/music-player.git
 cd music-player
 
 # 2. Install and run the frontend
