@@ -1,0 +1,33 @@
+:root{
+  --bg:#071025; --card:#0b1220; --accent:#7c3aed; --muted:#94a3b8;
+}
+
+/* layout */
+*{box-sizing:border-box}
+html,body,#root{height:100%;margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,#071025,#061021);color:#e6eef6}
+.app{min-height:100vh;display:flex;flex-direction:column}
+.container{display:grid;grid-template-columns:220px 1fr;gap:20px;padding:20px}
+.sidebar{background:rgba(255,255,255,0.03);padding:16px;border-radius:12px}
+.content{padding:12px}
+.section-title{margin:0 0 12px 0;color:var(--muted);font-size:14px}
+.song-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+
+/* navbar */
+.navbar{display:flex;align-items:center;padding:12px 20px;gap:12px}
+.logo{font-weight:700;color:var(--accent);font-size:18px}
+
+/* song card */
+.song-card{background:var(--card);border-radius:10px;padding:12px;display:flex;gap:12px;align-items:center}
+.song-card .meta{flex:1}
+.song-card h4{margin:0 0 6px 0;font-size:16px}
+.song-card p{margin:0;color:var(--muted);font-size:13px}
+.play-btn{background:linear-gradient(180deg,var(--accent),#5b21b6);border:none;color:white;padding:8px 10px;border-radius:8px;cursor:pointer}
+
+/* genres */
+.genre-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.genre-list li{cursor:pointer;padding:8px;border-radius:8px;color:var(--muted)}
+.genre-list li.selected{background:rgba(124,58,237,0.16);color:white;font-weight:600}
+
+/* footer player */
+.footer-player{position:fixed;left:0;right:0;bottom:0;background:linear-gradient(90deg,rgba(10,10,10,0.6),rgba(5,5,10,0.6));padding:10px 20px;border-top:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:12px}
+.footer-player .title{min-width:220px}

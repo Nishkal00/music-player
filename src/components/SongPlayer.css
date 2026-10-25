@@ -1,0 +1,150 @@
+/* src/components/SongPlayer.css */
+
+/* footer container */
+.footer-player {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(10,10,10,0.85), rgba(5,5,10,0.85));
+  padding: 12px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  z-index: 60;
+  box-shadow: 0 -6px 30px rgba(2,6,23,0.6);
+  backdrop-filter: blur(6px);
+}
+
+/* left area: cover + meta */
+.footer-player .left {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  min-width: 260px;
+}
+
+.footer-player .cover {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg,#111827,#0b1220);
+  font-size: 22px;
+}
+
+.footer-player .meta {
+  min-width: 180px;
+}
+
+.footer-player .meta .title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.footer-player .meta .artist {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+/* controls center */
+.footer-player .controls {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 8px;
+}
+
+.footer-player .controls .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.footer-player button {
+  background: transparent;
+  border: none;
+  color: #e6eef6;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background .12s ease, transform .06s ease;
+}
+
+.footer-player button:hover {
+  background: rgba(255,255,255,0.03);
+  transform: translateY(-1px);
+}
+
+.footer-player .play-btn {
+  padding: 8px 14px;
+  border-radius: 12px;
+  background: linear-gradient(180deg,#7c3aed,#5b21b6);
+  color: white;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(92,33,163,0.12);
+}
+
+/* progress bar area */
+.footer-player .progress-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.footer-player .progress-row .time {
+  font-size: 12px;
+  color: #94a3b8;
+  width: 48px;
+  text-align: right;
+}
+
+.footer-player .progress-row input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  outline: none;
+}
+
+/* range thumb */
+.footer-player .progress-row input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+
+/* volume */
+.footer-player .volume {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  min-width: 140px;
+}
+
+/* responsive */
+@media (max-width: 880px) {
+  .footer-player .left { min-width: 160px; }
+  .footer-player .meta { display: none; }
+  .footer-player .volume { display: none; }
+}
+
+@media (max-width: 560px) {
+  .footer-player { padding: 10px; gap: 8px; }
+  .footer-player .controls .buttons { gap: 6px; }
+  .footer-player .play-btn { padding: 6px 10px; }
+}
